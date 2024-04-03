@@ -1,5 +1,5 @@
 const Settings = {
-    placesCount: 10,
-  } as const;
-  
-  export default Settings;
+  placesCount: 10,
+} as const;
+
+export default Settings;

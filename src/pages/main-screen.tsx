@@ -1,7 +1,7 @@
 import CityCard from '../components/city-card';
 
 type MainScreenProps = {
-  placesCount: number;
+placesCount: number;
 }
 
 function MainScreen({placesCount}: MainScreenProps): JSX.Element {
@@ -30,7 +30,7 @@ function MainScreen({placesCount}: MainScreenProps): JSX.Element {
                   >
                     <div className="header__avatar-wrapper user__avatar-wrapper"></div>
                     <span className="header__user-name user__name">
-                      Oliver.conner@gmail.com
+                    Oliver.conner@gmail.com
                     </span>
                     <span className="header__favorite-count">3</span>
                   </a>
@@ -92,7 +92,7 @@ function MainScreen({placesCount}: MainScreenProps): JSX.Element {
               <form className="places__sorting" action="#" method="get">
                 <span className="places__sorting-caption">Sort by</span>
                 <span className="places__sorting-type" tabIndex={0}>
-                  Popular
+                Popular
                   <svg className="places__sorting-arrow" width="7" height="4">
                     <use xlinkHref="#icon-arrow-select"></use>
                   </svg>
@@ -102,16 +102,16 @@ function MainScreen({placesCount}: MainScreenProps): JSX.Element {
                     className="places__option places__option--active"
                     tabIndex={0}
                   >
-                    Popular
+                Popular
                   </li>
                   <li className="places__option" tabIndex={0}>
-                    Price: low to high
+                Price: low to high
                   </li>
                   <li className="places__option" tabIndex={0}>
-                    Price: high to low
+                Price: high to low
                   </li>
                   <li className="places__option" tabIndex={0}>
-                    Top rated first
+                Top rated first
                   </li>
                 </ul>
               </form>
