@@ -22,7 +22,7 @@ export const offers: Offer[] = [
     isFavorite: true,
     isPremium: true,
     rating: 4,
-    previewImage: 'https://w.forfun.com/fetch/85/85ae14568a42dcfeb55be68307d1a797.jpeg'
+    previewImage: '../../../markup/img/room.jpg'
   },
   {
     id: '2',
@@ -45,7 +45,7 @@ export const offers: Offer[] = [
     isFavorite: true,
     isPremium: false,
     rating: 3,
-    previewImage: 'https://w.forfun.com/fetch/85/85ae14568a42dcfeb55be68307d1a797.jpeg'
+    previewImage: '../../../markup/img/room.jpg'
   },
   {
     id: '3',
@@ -68,7 +68,7 @@ export const offers: Offer[] = [
     isFavorite: false,
     isPremium: false,
     rating: 4.24,
-    previewImage: 'https://w.forfun.com/fetch/85/85ae14568a42dcfeb55be68307d1a797.jpeg'
+    previewImage: '../../../markup/img/room.jpg'
   },
   {
     id: '4',
@@ -91,6 +91,6 @@ export const offers: Offer[] = [
     isFavorite: true,
     isPremium: false,
     rating: 2,
-    previewImage: 'https://w.forfun.com/fetch/85/85ae14568a42dcfeb55be68307d1a797.jpeg'
+    previewImage: '../../../markup/img/room.jpg'
   },
 ];
