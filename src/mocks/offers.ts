@@ -34,13 +34,13 @@ export const offers: Offer[] = [
       location: {
         latitude: 52.35514938496378,
         longitude: 4.673877537499948,
-        zoom: 8
-      }
+        zoom: 8,
+      },
     },
     location: {
       latitude: 52.3609553943508,
       longitude: 4.85309666406198,
-      zoom: 8
+      zoom: 8,
     },
     isFavorite: true,
     isPremium: false,
@@ -57,13 +57,13 @@ export const offers: Offer[] = [
       location: {
         latitude: 52.35514938496378,
         longitude: 4.673877537499948,
-        zoom: 8
-      }
+        zoom: 8,
+      },
     },
     location: {
       latitude: 52.3909553943508,
       longitude: 4.929309666406198,
-      zoom: 8
+      zoom: 8,
     },
     isFavorite: false,
     isPremium: false,
@@ -80,17 +80,41 @@ export const offers: Offer[] = [
       location: {
         latitude: 52.35514938496378,
         longitude: 4.673877537499948,
-        zoom: 8
-      }
+        zoom: 8,
+      },
     },
     location: {
       latitude: 52.3809553943508,
       longitude: 4.939309666406198,
-      zoom: 8
+      zoom: 8,
     },
     isFavorite: true,
     isPremium: false,
     rating: 2,
     previewImage: '../../../markup/img/room.jpg'
+  },
+  {
+    id: '5',
+    title: 'Beautiful & luxurious studio at great location',
+    type: 'apartment',
+    price: 120,
+    city: {
+      name: 'Paris',
+      location: {
+        latitude: 52.35514938496378,
+        longitude: 4.673877537499948,
+        zoom: 8,
+      },
+    },
+    location: {
+      latitude: 52.3809553943508,
+      longitude: 4.939309666406198,
+      zoom: 8,
+    },
+    isFavorite: true,
+    isPremium: false,
+    rating: 2,
+    previewImage:
+      'https://w.forfun.com/fetch/85/85ae14568a42dcfeb55be68307d1a797.jpeg',
   },
 ];
