@@ -5,7 +5,7 @@ export const offers: Offer[] = [
     id: '1',
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment',
-    price: 120,
+    price: 150,
     city: {
       name: 'Amsterdam',
       location: {
@@ -28,7 +28,7 @@ export const offers: Offer[] = [
     id: '2',
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment',
-    price: 120,
+    price: 80,
     city: {
       name: 'Amsterdam',
       location: {
@@ -45,13 +45,13 @@ export const offers: Offer[] = [
     isFavorite: true,
     isPremium: false,
     rating: 3,
-    previewImage: '../../../markup/img/room.jpg'
+    previewImage: '../../../markup/img/apartment-small-03.jpg'
   },
   {
     id: '3',
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment',
-    price: 120,
+    price: 220,
     city: {
       name: 'Amsterdam',
       location: {
@@ -68,13 +68,13 @@ export const offers: Offer[] = [
     isFavorite: false,
     isPremium: false,
     rating: 4.24,
-    previewImage: '../../../markup/img/room.jpg'
+    previewImage: '../../../markup/img/apartment-03.jpg'
   },
   {
     id: '4',
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment',
-    price: 120,
+    price: 100,
     city: {
       name: 'Amsterdam',
       location: {
@@ -91,7 +91,7 @@ export const offers: Offer[] = [
     isFavorite: true,
     isPremium: false,
     rating: 2,
-    previewImage: '../../../markup/img/room.jpg'
+    previewImage: '../../../markup/img/apartment-02.jpg'
   },
   {
     id: '5',
@@ -114,7 +114,6 @@ export const offers: Offer[] = [
     isFavorite: true,
     isPremium: false,
     rating: 2,
-    previewImage:
-      'https://w.forfun.com/fetch/85/85ae14568a42dcfeb55be68307d1a797.jpeg',
+    previewImage: '../../../markup/img/apartment-01.jpg',
   },
 ];
