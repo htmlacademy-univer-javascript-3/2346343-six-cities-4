@@ -1,6 +1,5 @@
 import { Offer } from '../../../types/offer';
 import { NameSpace } from '../../../const';
-
 import { State } from '../../../types/state';
 
 export const getNearbyOffers = (state: State): Offer[] =>

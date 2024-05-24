@@ -6,7 +6,6 @@ import {
   fetchOfferAction,
   fetchReviewsAction,
 } from '../../store';
-
 import { useAppDispatch } from '../../hooks';
 
 export function useOfferData(id: string) {

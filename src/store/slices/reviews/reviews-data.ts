@@ -1,6 +1,5 @@
 import { NameSpace, Status } from '../../../const';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
 import { fetchReviewsAction, postReviewAction } from './api-actions';
 import { Review } from '../../../types/review';
 

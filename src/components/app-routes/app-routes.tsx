@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-
 import useAppRoutes from './use-app-routes';
 
 function AppRoutes(): JSX.Element {

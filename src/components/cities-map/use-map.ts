@@ -1,6 +1,5 @@
 import { MutableRefObject, useEffect, useRef, useState } from 'react';
 import { Map, TileLayer } from 'leaflet';
-
 import { Location } from '../../types/offer';
 
 function useMap(

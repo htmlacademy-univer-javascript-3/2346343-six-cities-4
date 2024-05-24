@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
-
 import { fetchFavouritesAction, getAuthCheckedStatus } from '../../store';
-
 import { useAppDispatch, useAppSelector } from '../../hooks';
 
 const useFetchFavorites = () => {

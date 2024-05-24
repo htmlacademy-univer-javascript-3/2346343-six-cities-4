@@ -1,14 +1,11 @@
 import { Fragment, useEffect, useState } from 'react';
-
 import {
   getIsReviewsStatusSubmitting,
   getReviewsHasError,
   postReviewAction,
   setReviewsErrorStatus,
 } from '../../store';
-
 import { useAppDispatch, useAppSelector } from '../../hooks';
-
 import { Status } from '../../const';
 
 const ratingTypes: Record<string, number> = {

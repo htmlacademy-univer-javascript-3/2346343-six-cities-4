@@ -1,6 +1,5 @@
 import { ExtendedOffer } from '../../../types/offer';
 import { NameSpace } from '../../../const';
-
 import { State } from '../../../types/state';
 
 export const getOffer = (state: State): ExtendedOffer | null =>
