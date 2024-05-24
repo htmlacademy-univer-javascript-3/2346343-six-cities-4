@@ -1,15 +1,21 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { loadOffers, changeCity, setSortType, setSelectedPoint,
-  setError, setOffersDataLoadingStatus, setAuthorizationStatus } from './action';
-import { City, Offer } from '../types/offer';
+import { loadOffers, changeCity, setSortType, setSelectedPoint, setError,
+  setOffersDataLoadingStatus, setAuthorizationStatus, addReview, loadOfferData } from './action';
+import { City, ExtendedOffer, Offer } from '../types/offer';
 import { AuthorizationStatus } from '../const';
+import { Review } from '../types/review';
 
 type StateType = {
+  currentOffer: {
+    offerInfo: ExtendedOffer | null;
+    nearestOffers: Offer[];
+    reviews: Review[];
+  };
   city: City;
   offersList: Offer[];
   selectedSortType: string;
   selectedPoint: {
-    title: string;
+    id: string;
   } | null;
   authorizationStatus: AuthorizationStatus;
   isOffersDataLoading: boolean;
@@ -17,6 +23,11 @@ type StateType = {
 };
 
 const initialState: StateType = {
+  currentOffer: {
+    offerInfo: null,
+    nearestOffers: [],
+    reviews: [],
+  },
   city: {
     name: 'Paris',
     location: {
@@ -44,8 +55,15 @@ const reducer = createReducer(initialState, (builder) => {
     .addCase(loadOffers, (state, { payload }) => {
       state.offersList = payload;
     })
+    .addCase(loadOfferData, (state, { payload }) => {
+      state.selectedPoint = { id: payload.offerInfo.id };
+      state.currentOffer = { ...payload };
+    })
     .addCase(setSelectedPoint, (state, { payload }) => {
       state.selectedPoint = payload;
+    })
+    .addCase(addReview, (state, { payload }) => {
+      state.currentOffer.reviews = [...state.currentOffer.reviews, payload];
     })
     .addCase(setAuthorizationStatus, (state, action) => {
       state.authorizationStatus = action.payload;
