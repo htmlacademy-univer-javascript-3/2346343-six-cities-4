@@ -1,6 +1,5 @@
 import { AuthorizationStatus, NameSpace } from '../../../const';
 import { UserData } from '../../../types/user-data';
-
 import { State } from '../../../types/state';
 
 export const getAuthCheckedStatus = (state: State): boolean =>

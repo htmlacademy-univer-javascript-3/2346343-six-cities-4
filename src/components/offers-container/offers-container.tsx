@@ -16,7 +16,7 @@ function OffersContainer({
   const noPlacesAvailable = offers.length === 0;
 
   return noPlacesAvailable ? (
-    <EmptyOffers />
+    <EmptyOffers offers={[]} cardType={'cities'} />
   ) : (
     <AvailableOffers
       offers={offers}

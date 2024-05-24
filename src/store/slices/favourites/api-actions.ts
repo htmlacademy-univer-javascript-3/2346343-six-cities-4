@@ -1,9 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { Offer } from '../../../types/offer';
 import { FavouriteData } from '../../../types/favourite-data';
-
 import { APIRoute, NameSpace } from '../../../const';
-
 import { AsyncThunkConfig } from '../../../types/state';
 import { updateMultipleOffers } from '../multiple-offers/multiple-offers-data';
 import { updateSingleOffer } from '../offer/single-offer-data';
