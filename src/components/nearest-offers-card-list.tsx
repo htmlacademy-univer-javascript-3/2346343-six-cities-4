@@ -1,8 +1,8 @@
-import CityCard from './city-card';
-import { CityCardListProps } from '../types/card-list';
+import CityCard from './offer-card';
+import { OffersCardListProps } from '../types/card-list';
 import { CardType } from '../const';
 
-function NearestCitiesCardList({ offers }: CityCardListProps) {
+function NearestOffersCardList({ offers }: OffersCardListProps) {
   return (
     <div className="near-places__list places__list">
       {offers.map((offer) => (
@@ -16,4 +16,4 @@ function NearestCitiesCardList({ offers }: CityCardListProps) {
   );
 }
 
-export default NearestCitiesCardList;
+export default NearestOffersCardList;
