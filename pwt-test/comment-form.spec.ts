@@ -8,11 +8,13 @@ test.describe('Comment Form', () => {
       'Привет, это я, ваш единственный пользователь. '+
       'Всё это время, я делал вид, что на сайте много разных людей, но это был я. '+
       'Сейчас я отправлю этот комментарий co всех своих аккаунтов, чтобы доказать это.';
-    const RATING = 'good';
+    const RATING = 'perfect';
 
     await page.goto('http://localhost:5173/login');
 
-    await page.fill('input[name="email"]', 'fanat@example.com');
+    const name = Math.floor(Math.random() * 1024);
+    
+    await page.fill('input[name="email"]', 'fanat'+name+'@example.com');
     await page.fill('input[name="password"]', 'password123');
 
     await page.click('button[type="submit"]');
@@ -51,8 +53,8 @@ test.describe('Comment Form', () => {
       .getAttribute('style');
 
     expect(newReviewText).toBe(REVIEW_TEXT);
-    expect(newReviewAuthor).toBe('fanat');
-    expect(newReviewRating).toBe('width: 80%;');
+    expect(newReviewAuthor).toBe('fanat'+name);
+    expect(newReviewRating).toBe('width: 100%;');
   });
 
   test('Проверка работы формы комментария (неавторизованный пользователь)', async ({
