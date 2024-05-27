@@ -1,7 +1,7 @@
 import { test, expect, Locator } from '@playwright/test';
 
 test('Проверка работы фильтрации по городам', async ({ page }) => {
-  // Открываем страницу с карточками
+  // load page
   await page.goto('http://localhost:5173');
 
   const isActive = async (locator: Locator) => {
@@ -15,21 +15,19 @@ test('Проверка работы фильтрации по городам', a
     await li.click();
     const currentCity = await li.textContent();
 
-    // Ожидаем перерисовки карточек после фильтрации
+    // load cards after filtering
     await page.waitForSelector('.cities__card', {
       state: 'attached',
       timeout: 5000,
     });
 
-    // Кликаем на элемент
     const hasActiveClass = await isActive(li);
     expect(hasActiveClass).toBeTruthy();
 
     const placesFoundText = await page.locator('.places__found').textContent();
 
-    // Получаем последнее слово из текста
     const lastWord = placesFoundText?.split(' ').pop();
-    // Проверяем, что значение атрибута data-test равно последнему слову из places__found
+    // check that value data-test equal last word from places__found
     expect(currentCity).toBe(lastWord);
   }
 });

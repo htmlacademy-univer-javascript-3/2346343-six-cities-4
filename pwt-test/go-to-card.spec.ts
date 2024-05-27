@@ -1,10 +1,12 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Go to Offer', () => {
-  test('should redirect to offer page when card is clicked', async ({ page }) => {
-    await page.goto('http://localhost:5173'); // load page
+  test('Проверка перехода по карточкам', async ({ page }) => {
+    // load page
+    await page.goto('http://localhost:5173'); 
 
-    await page.locator('.cities__card').first().waitFor(); // load cards
+    // load cards
+    await page.locator('.cities__card').first().waitFor(); 
     const cardElement = await page.locator('.cities__card').first();
 
     // get first card's id
@@ -20,11 +22,11 @@ test.describe('Go to Offer', () => {
     const cardPriceElement = await cardElement.locator('.place-card__price-value').first();
     const cardPrice = await cardPriceElement.evaluate((el) => el.textContent?.trim());
 
-    await cardElement.click(); // click the first card
+    await cardElement.click();
 
-    // wait for server response
+    // wait for server response and new page load
     await page.waitForResponse((resp) => resp.url().includes(`/six-cities/offers/${ cardId}`) && resp.status() === 200);
-    page.waitForURL(`http://localhost:5173/offer/${ cardId}`); // wait for new page to load
+    page.waitForURL(`http://localhost:5173/offer/${ cardId}`); 
 
     // check if offer's name and price match card's
     const offerNameElement = await page.locator('.offer__name').first();

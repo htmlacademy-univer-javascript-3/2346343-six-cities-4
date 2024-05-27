@@ -5,12 +5,14 @@ test.describe('Comment Form', () => {
     page,
   }) => {
     const REVIEW_TEXT =
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+      'Привет, это я, ваш единственный пользователь. '+
+      'Всё это время, я делал вид, что на сайте много разных людей, но это был я. '+
+      'Сейчас я отправлю этот комментарий co всех своих аккаунтов, чтобы доказать это.';
     const RATING = 'good';
 
     await page.goto('http://localhost:5173/login');
 
-    await page.fill('input[name="email"]', 'newUser@example.com');
+    await page.fill('input[name="email"]', 'fanat@example.com');
     await page.fill('input[name="password"]', 'password123');
 
     await page.click('button[type="submit"]');
@@ -49,7 +51,7 @@ test.describe('Comment Form', () => {
       .getAttribute('style');
 
     expect(newReviewText).toBe(REVIEW_TEXT);
-    expect(newReviewAuthor).toBe('newUser');
+    expect(newReviewAuthor).toBe('fanat');
     expect(newReviewRating).toBe('width: 80%;');
   });
 

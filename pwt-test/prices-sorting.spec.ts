@@ -1,13 +1,13 @@
 import { test, expect } from '@playwright/test';
 
 test('Проверка сортировки карточек по стоимости', async ({ page }) => {
-  // Открываем страницу с карточками
+  // load page
   await page.goto('http://localhost:5173');
 
-  // Ожидаем загрузки карточек
+  // whait for server response
   await page.waitForSelector('.cities__card');
 
-  // Получаем цены всех карточек до сортировки
+  // get prices of all cards before sorting
   const pricesBeforeSorting = await page
     .locator('place-card__price-value')
     .allTextContents();
@@ -15,7 +15,7 @@ test('Проверка сортировки карточек по стоимос
   await page.click('.places__sorting-type');
   await page.click('text="Price: low to high"');
 
-  // Ожидаем перерисовки карточек после сортировки
+  // whait while cards will be loaded after sorting
   await page.waitForSelector('.cities__card', {
     state: 'attached',
     timeout: 5000,
@@ -34,7 +34,7 @@ test('Проверка сортировки карточек по стоимос
   await page.click('.places__sorting-type');
   await page.click('text="Price: high to low"');
 
-  // Ожидаем перерисовки карточек после сортировки
+  // whait while cards will be loaded after sorting
   await page.waitForSelector('.cities__card', {
     state: 'attached',
     timeout: 5000,
@@ -53,7 +53,7 @@ test('Проверка сортировки карточек по стоимос
   await page.click('.places__sorting-type');
   await page.click('text="Popular"');
 
-  // Ожидаем перерисовки карточек после сортировки
+  // whait while cards will be loaded after sorting
   await page.waitForSelector('.cities__card', {
     state: 'attached',
     timeout: 5000,

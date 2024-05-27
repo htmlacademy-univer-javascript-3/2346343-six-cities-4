@@ -1,16 +1,19 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Loading Cards from server', () => {
-  test('should load cards from server correctly', async ({ page }) => {
-    await page.goto('http://localhost:5173'); // load page
+  test('Проверка загрузки карточек c сервера', async ({ page }) => {
+    // load page
+    await page.goto('http://localhost:5173'); 
 
     // wait for server response
     await page.waitForResponse((resp) => resp.url().includes('/six-cities/offers') && resp.status() === 200);
 
-    await page.locator('.cities__card').first().waitFor(); // load cards
+    // load cards
+    await page.locator('.cities__card').first().waitFor(); 
 
+    // wait while one card will be loaded
     const cardElements = await page.locator('.cities__card').all();
-    expect(cardElements.length).toBeGreaterThan(0); // make sure there's at least one card
+    expect(cardElements.length).toBeGreaterThan(0); 
 
     for (const element of cardElements) {
       // check that all cards have following text

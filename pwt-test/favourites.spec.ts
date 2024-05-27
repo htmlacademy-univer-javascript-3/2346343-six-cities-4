@@ -47,8 +47,8 @@ test.describe('Favourites', () => {
 
     // Submit the form
     await Promise.all([
-      page.waitForURL('http://localhost:5173'), // Ожидание перехода после отправки формы
-      page.click('button[type="submit"]'), // Клик по кнопке "Sign in"
+      page.waitForURL('http://localhost:5173'), 
+      page.click('button[type="submit"]'), 
     ]);
 
     await page.waitForSelector('.cities__card');
