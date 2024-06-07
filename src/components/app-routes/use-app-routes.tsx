@@ -41,7 +41,7 @@ function useAppRoutes() {
     {
       path: Routes.Offer,
       element: <OfferScreen />,
-      layout: <PageLayout isFooterShow />,
+      layout: <PageLayout isHeaderUserNavigation={false} />,
     },
     {
       path: Routes.NotFound,
