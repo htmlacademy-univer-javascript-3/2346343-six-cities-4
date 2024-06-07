@@ -20,7 +20,7 @@ function CommonPlaceCard(props: PlaceCardProps): JSX.Element {
     ...rest
   } = props;
   const pathCard = `/offer/${id}`;
-  const ratingPercentage = formatRating(rest.rating);
+  const ratingPercentage = formatRating(Math.round(rest.rating));
   const capitalizedType = capitalizeFirstLetter(rest.type);
 
   return (
